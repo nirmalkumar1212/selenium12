@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="36753" started-at="2019-03-07T12:58:11Z" finished-at="2019-03-07T12:58:47Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="36753" started-at="2019-03-07T12:58:11Z" finished-at="2019-03-07T12:58:47Z">
+      <class name="com.item.tests.SearchItemTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.item.tests.SearchItemTest@55f3ddb1]" name="setUp" is-config="true" duration-ms="5036" started-at="2019-03-07T18:28:11Z" finished-at="2019-03-07T18:28:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testBlankForItemCategory()[pri:0, instance:com.item.tests.SearchItemTest@55f3ddb1]" name="testBlankForItemCategory" duration-ms="3425" started-at="2019-03-07T18:28:16Z" finished-at="2019-03-07T18:28:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBlankForItemCategory -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.item.tests.SearchItemTest@55f3ddb1]" name="setUp" is-config="true" duration-ms="3845" started-at="2019-03-07T18:28:19Z" finished-at="2019-03-07T18:28:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSearchForEmptyList()[pri:0, instance:com.item.tests.SearchItemTest@55f3ddb1]" name="testSearchForEmptyList" duration-ms="6375" started-at="2019-03-07T18:28:23Z" finished-at="2019-03-07T18:28:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchForEmptyList -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.item.tests.SearchItemTest@55f3ddb1]" name="setUp" is-config="true" duration-ms="5583" started-at="2019-03-07T18:28:29Z" finished-at="2019-03-07T18:28:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSearchForResults()[pri:0, instance:com.item.tests.SearchItemTest@55f3ddb1]" name="testSearchForResults" duration-ms="11283" started-at="2019-03-07T18:28:35Z" finished-at="2019-03-07T18:28:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchForResults -->
+        <test-method status="PASS" signature="driverQuit()[pri:0, instance:com.item.tests.SearchItemTest@55f3ddb1]" name="driverQuit" is-config="true" duration-ms="1180" started-at="2019-03-07T18:28:46Z" finished-at="2019-03-07T18:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- com.item.tests.SearchItemTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

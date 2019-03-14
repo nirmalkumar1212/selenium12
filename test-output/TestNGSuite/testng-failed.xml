@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNGSuite]">
+  <test name="TestNgTest(failed)">
+    <classes>
+      <class name="com.item.tests.SearchItemTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testSearchForEmptyList"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- com.item.tests.SearchItemTest -->
+    </classes>
+  </test> <!-- TestNgTest(failed) -->
+</suite> <!-- Failed suite [TestNGSuite] -->
