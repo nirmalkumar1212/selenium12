@@ -1,0 +1,197 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\widctlpar\b\f0\fs22 Practice \par
+\par
+Axis Bank\par
+\b0\par
+package axis;\par
+\par
+import org.openqa.selenium.By;\par
+import org.openqa.selenium.WebDriver;\par
+import org.openqa.selenium.chrome.ChromeDriver;\par
+import org.openqa.selenium.chrome.ChromeOptions;\par
+\par
+public class Axis_bank \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ public static void main(String[] args) throws InterruptedException \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.setProperty("webdriver.chrome.driver", "C:\\\\Program Files (x86){{\field{\*\fldinst{HYPERLINK "file://SeleniumJava/chromedriver.exe"}}{\fldrslt{\ul\cf1\cf1\ul\\\\SeleniumJava\\\\chromedriver.exe}}}}\f0\fs22 ");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ ChromeOptions ops = new ChromeOptions();\par
+\~\~\~\~\~\~\~ ops.addArguments("--disable-notifications");\par
+\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ WebDriver driver=null;\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver = new ChromeDriver(ops);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.get("https://www.axisbank.com/");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println(driver.getTitle());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("/html/body/header/div[4]/div/div/div[2]/div[2]/ul/li[1]/a")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("/html/body/header/div[1]/div[5]/div/div/div/input")).sendKeys("FD");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("/html/body/header/div[1]/div[5]/div/div/div/button")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.get("https://www.axisbank.com/personal/calculators/fd-monthly-investment-calculator");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(2000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"ctl00_Body_C002_txtAmount\\"]")).clear();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(1000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ int oops=driver.findElements(By.xpath("//*[@id=\\"ctl00_Body_T53C9A754039_Col00\\"]/div/div/p")).size();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ if(oops==1) \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.navigate().back();\par
+//\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.getCurrentUrl();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(5000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.switchTo().alert().accept();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"ctl00_Body_C002_txtAmount\\"]")).clear();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"ctl00_Body_C002_txtAmount\\"]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"ctl00_Body_C002_txtAmount\\"]")).sendKeys("50000");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(2000);\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"ctl00_Body_C002_btnCal\\"]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"aspnetForm\\"]/div[6]/div[6]/div/div[2]/div[2]/div/div/div[2]/div/div[2]/p[1]/span")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"aspnetForm\\"]/div[6]/div[6]/div/div[2]/div[2]/div/div/div[2]/div/div[2]/p[2]/span")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ int oops1=driver.findElements(By.xpath("//*[@id=\\"ctl00_Body_T53C9A754039_Col00\\"]/div/div/p")).size();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ if(oops1==1) \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.navigate().back();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(5000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.switchTo().alert().accept();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"aspnetForm\\"]/div[6]/div[6]/div/div[2]/div[2]/div/div/div[2]/div/div[2]/p[1]/span")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"aspnetForm\\"]/div[6]/div[6]/div/div[2]/div[2]/div/div/div[2]/div/div[2]/p[2]/span")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \}\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \}\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ //driver.close();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \}\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\}\par
+\par
+\b Birds:\par
+\b0\par
+package birds;\par
+\par
+import org.openqa.selenium.By;\par
+import org.openqa.selenium.WebDriver;\par
+import org.openqa.selenium.chrome.ChromeDriver;\par
+import org.openqa.selenium.chrome.ChromeOptions;\par
+\par
+public class Birds \{\par
+\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ public static void main(String[] args) throws InterruptedException \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.setProperty("webdriver.chrome.driver", "C:\\\\Program Files (x86){{\field{\*\fldinst{HYPERLINK "file://SeleniumJava/chromedriver.exe"}}{\fldrslt{\ul\cf1\cf1\ul\\\\SeleniumJava\\\\chromedriver.exe}}}}\f0\fs22 ");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ ChromeOptions ops = new ChromeOptions();\par
+\~\~\~\~\~\~\~ ops.addArguments("--disable-notifications");\par
+\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ WebDriver driver = null;\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver = new ChromeDriver(ops);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.get("https://marshallspetzone.com");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.manage().window().maximize();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"cbp-hrmenu\\"]/ul/li[4]/a/span[1]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"categories_block_left\\"]/div/ul/li[1]/a")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ String obj1 = driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/h5/a")).getText();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/h5/a")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ //driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/h5/a")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/div[3]/a/span")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(5000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"layer_cart\\"]/div[3]/div/span/span")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(3000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ String obj2 = driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[7]/div/div[2]/h5/a")).getText(); \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[7]/div/div[2]/h5/a")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[7]/div/div[2]/div[3]/a/span")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(5000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"layer_cart\\"]/div[3]/div/a/span")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(3000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ String pdt1 = driver.findElement(By.xpath("//*[@id=\\"product_5668_0_0_0\\"]/td[2]/p/a")).getText();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ String pdt2 = driver.findElement(By.xpath("//*[@id=\\"product_5646_0_0_0\\"]/td[2]/p/a")).getText();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ if (obj1.contentEquals(pdt1)) \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ if (obj2.contentEquals(pdt2)) \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println("verified");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.quit();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \}\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \}\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \}\par
+\}\par
+\par
+\b Marshall:\par
+\b0\par
+package marshall;\par
+\par
+import org.apache.bcel.generic.Select;\par
+import org.openqa.selenium.By;\par
+import org.openqa.selenium.WebDriver;\par
+import org.openqa.selenium.chrome.ChromeDriver;\par
+import org.openqa.selenium.chrome.ChromeOptions;\par
+\par
+//import com.gargoylesoftware.htmlunit.javascript.host.dom.Selection;\par
+\par
+\par
+public class Marshall \{\par
+\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ public static void main(String[] args) throws InterruptedException \{\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ // TODO Auto-generated method stub\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.setProperty("webdriver.chrome.driver", "C:\\\\Program Files (x86){{\field{\*\fldinst{HYPERLINK "file://SeleniumJava/chromedriver.exe"}}{\fldrslt{\ul\cf1\cf1\ul\\\\SeleniumJava\\\\chromedriver.exe}}}}\f0\fs22 ");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ ChromeOptions ops = new ChromeOptions();\par
+\~\~\~\~\~\~\~ ops.addArguments("--disable-notifications");\par
+\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ WebDriver driver=null;\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver = new ChromeDriver(ops);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.get("https://www.marshallspetzone.com/");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.manage().window().maximize();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"cbp-hrmenu\\"]/ul/li[3]/a/span[1]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"categories_block_left\\"]/div/ul/li[3]/a")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"selectProductSort\\"]"));\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(5000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"selectProductSort\\"]/option[2]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(5000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ //Select obj1 = new Select();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ //Select sel=new Select(driver.findElement(By.xpath("//*[@id=\\"selectProductSort\\"]")));\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ //sel.selectByIndex(2);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ //sel.selectByIndex("Price: Highest first");\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/h5/a")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/div[1]/span[1]")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"cbp-hrmenu\\"]/ul/li[3]/a/span[1]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"categories_block_left\\"]/div/ul/li[1]/a")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"selectProductSort\\"]/option[3]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(5000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \~\~\~\~ System.out.println(driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/h5/a")).getText());\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ String price1 = driver.findElement(By.xpath("//*[@id=\\"center_column\\"]/ul/li[1]/div/div[2]/div[1]/span[1]")).getText();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ System.out.println(price1);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"tableview\\"]")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ Thread.sleep(4000);\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ driver.findElement(By.xpath("//*[@id=\\"header_logo\\"]/a/img")).click();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ //driver.close();\par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \}\par
+\par
+\}\par
+\par
+\b Goibbio\par
+\b0\par
+
+\pard\sa200\sl276\slmult1\f1\lang9\par
+}
+ 
