@@ -1,0 +1,31 @@
+
+public class Search {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\N285385\\eclipse-workspace\\Travel\\chromedriver.exe");
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("--Disable-Notifications");
+		//System.setProperty("webdriver.ie.driver", "C:\\Users\\N285385\\eclipse-workspace\\Travel\\Internetexplorerdriver.exe");
+		//WebDriver IEdriver=new InternetExplorerDriver();
+		WebDriver driver=new ChromeDriver(options);
+		driver.get("https://www.goindigo.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//input[@placeholder='From'])[1]")).click();
+		driver.findElement(By.xpath("(//input[@placeholder='From'])[1]")).sendKeys("Kolkata(CCU)");
+	
+		driver.findElement(By.xpath("(//input[@placeholder='From'])[1]")).sendKeys(Keys.chord(Keys.ENTER));
+		driver.findElement(By.xpath("(//input[@placeholder='To'])[1]")).click();
+		driver.findElement(By.xpath("(//input[@placeholder='To'])[1]")).sendKeys("DELHI");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//input[@placeholder='To'])[1]")).sendKeys(Keys.chord(Keys.ARROW_DOWN,Keys.ENTER));
+		driver.findElement(By.xpath("(//input[@placeholder='Departure Date'])[1]")).click();
+		driver.findElement(By.xpath("(//a[text()='30'])[2]")).click();
+		Thread.sleep(3000);
+                 driver.close();
+                
+        
+		
+	}
+
+}
